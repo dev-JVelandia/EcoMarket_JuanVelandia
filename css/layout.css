@@ -1,0 +1,108 @@
+/* ===== HEADER ===== */
+.header {
+    position: sticky;                          
+    top: 0;                                    
+    z-index: 100;                             
+    display: flex;                             
+    flex-wrap: wrap;                          
+    align-items: center;                       
+    justify-content: space-between;            
+    padding: var(--espacio-m);
+    background-color: var(--color-fondo);      
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);  
+}
+
+.header__logo {
+    order: 1;                                  
+    font-size: 1.75rem;
+    font-weight: 700;                          
+    color: var(--color-verde-oscuro);
+}
+
+/* ===== MENÚ ===== */
+.menu {
+    order: 3;                                  
+    width: 100%;                               
+}
+
+.menu__lista {
+    display: flex;                             
+    flex-wrap: wrap;                           
+    justify-content: space-between;            
+}
+
+.menu__enlace {
+    display: block;                            
+    padding: 0.75rem 0.5rem;                   
+    font-size: 0.95rem;                        
+    border-radius: 20px;                        
+    transition: background-color 0.2s;         
+}
+
+.menu__enlace:hover {
+    background-color: var(--color-verde-suave);
+}
+
+.menu__enlace--activo {
+    background-color: var(--color-verde-boton);
+    color: var(--color-blanco);                
+}
+
+/* ===== ACCESOS ===== */
+.acciones {
+    order: 2;                                  
+    display: flex;                             
+    gap: var(--espacio-s);                     
+}
+
+.acciones__enlace {
+    display: flex;                             
+    align-items: center;
+    justify-content: center;
+    width: 44px;                               
+    height: 44px;
+    border-radius: 50%;                        
+    transition: background-color 0.2s;
+}
+
+.acciones__enlace:hover {
+    background-color: var(--color-verde-suave);
+}
+
+.acciones__icono {
+    width: 24px;                              
+    height: 24px;
+}
+
+/* ===== FOCO PARA TECLADO ===== */
+.header a:focus-visible {
+    outline: 3px solid var(--color-verde-secundario);   
+    outline-offset: 2px;                                
+}
+
+/* ===== HEADER EN ESCRITORIO ===== */
+@media (min-width: 1024px) {
+    .header {
+        flex-wrap: nowrap;                     
+        padding: 1.25rem var(--espacio-l);
+        min-height: 80px;
+    }
+
+    .menu {
+        order: 2;                              
+        width: auto;                           
+    }
+
+    .menu__lista {
+        gap: var(--espacio-m);                 
+    }
+
+    .menu__enlace {
+        padding: 0.6rem 1.25rem;                  
+        font-size: 1rem;
+    }
+
+    .acciones {
+        order: 3;                              
+    }
+}
