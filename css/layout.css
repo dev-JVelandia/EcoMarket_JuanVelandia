@@ -180,6 +180,8 @@
     text-align: center;
 }
 
+
+
 /* ===================== TABLET (768px) ===================== */
 @media (min-width: 768px) {
     .footer__columnas {
@@ -221,5 +223,103 @@
 
     .footer__columnas {
         grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ===================== HERO ===================== */
+.hero {
+    position: relative;                        
+    display: flex;                             
+    align-items: center;                       
+    justify-content: center;                    
+    min-height: 360px;                          
+    overflow: hidden;                           
+}
+
+.hero__imagen {
+    position: absolute;                         
+    width: 100%;                                
+    height: 100%;                               
+    object-fit: cover;                        
+}
+
+.hero::after {
+    content: "";                               
+    position: absolute;                         
+    inset: 0;
+    background-color: rgba(20, 64, 31, 0.5);    
+}
+
+.hero__contenido {
+    position: relative;                         
+    z-index: 1;                               
+    display: flex;
+    flex-direction: column;                   
+    align-items: center;                       
+    gap: var(--espacio-m);                    
+    max-width: 720px;                           
+    padding: var(--espacio-l) var(--espacio-m); 
+    text-align: center;                         
+}
+
+.hero__titulo {
+    font-size: 2rem;                        
+    line-height: 1.2;                           
+    color: var(--color-blanco);                
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);  
+}
+
+@media (min-width: 768px) {
+    .hero {
+        min-height: 440px;                     
+    }
+
+    .hero__titulo {
+        font-size: 2.75rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        min-height: 520px;                      
+    }
+
+    .hero__titulo {
+        font-size: 3.25rem;
+    }
+}
+
+/* ===================== PRODUCTOS DESTACADOS ===================== */
+.destacados {
+    max-width: 1200px;                         
+    margin: 0 auto;                             
+    padding: var(--espacio-l) var(--espacio-m); 
+}
+
+.destacados__titulo {
+    margin-bottom: var(--espacio-m);           
+    font-size: 1.5rem;
+    color: var(--color-verde-oscuro);
+}
+
+.destacados__grid {
+    display: grid;
+    grid-template-columns: 1fr;                
+    gap: var(--espacio-m);                      
+}
+
+@media (min-width: 768px) {
+    .destacados__grid {
+        grid-template-columns: repeat(2, 1fr);  
+    }
+}
+
+@media (min-width: 1024px) {
+    .destacados {
+        padding: var(--espacio-l);              
+    }
+
+    .destacados__grid {
+        grid-template-columns: repeat(3, 1fr);  
     }
 }
