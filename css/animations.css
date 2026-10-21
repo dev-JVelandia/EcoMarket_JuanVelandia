@@ -1,0 +1,26 @@
+/* ===================== TRANSICIONES Y HOVER ===================== */
+.boton {
+    transition: background-color 0.2s ease;     
+}
+
+.tarjeta {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;   
+}
+
+.tarjeta:hover,
+.tarjeta:focus-within {
+    transform: translateY(-6px);                
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .boton,
+    .tarjeta {
+        transition: none;                       
+    }
+
+    .tarjeta:hover,
+    .tarjeta:focus-within {
+        transform: none;
+    }
+}
