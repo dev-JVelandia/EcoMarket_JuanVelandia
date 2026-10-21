@@ -106,3 +106,120 @@
         order: 3;                              
     }
 }
+
+/* ===================== FOOTER ===================== */
+.footer {
+    padding: var(--espacio-l) var(--espacio-m);
+    background-color: var(--color-verde-oscuro);   
+    color: var(--color-fondo);                     
+}
+
+.footer__logo {
+    margin-bottom: var(--espacio-l);
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+/* ----- Columnas ----- */
+.footer__columnas {
+    display: grid;
+    grid-template-columns: 1fr;                    
+    gap: var(--espacio-l);
+}
+
+.footer__titulo {
+    margin-bottom: var(--espacio-s);
+    font-size: 1.1rem;                          
+    color: var(--color-blanco);
+}
+
+.footer__address {
+    font-style: normal;                          
+}
+
+/* ----- Listas y enlaces ----- */
+.footer__lista {
+    display: flex;
+    flex-direction: column;                      
+}
+
+.footer__enlace {
+    display: inline-flex;                         
+    align-items: center;                       
+    justify-content: center;                      
+    gap: var(--espacio-s);                       
+    min-width: 44px;                               
+    min-height: 44px;                              
+    transition: color 0.2s;
+}
+
+.footer__enlace:hover {
+    color: var(--color-blanco);
+    text-decoration: underline;                   
+}
+
+.footer__enlace:hover .footer__icono {
+    opacity: 0.75;                                 
+}
+
+.footer__icono {
+    flex-shrink: 0;                                
+}
+
+.footer a:focus-visible {
+    outline: 3px solid var(--color-verde-principal);
+    outline-offset: 2px;
+}
+
+/* ----- Copyright ----- */
+.footer__copy {
+    margin-top: var(--espacio-l);
+    padding-top: var(--espacio-m);
+    border-top: 1px solid rgba(245, 245, 220, 0.3);   
+    font-size: 0.875rem;
+    text-align: center;
+}
+
+/* ===================== TABLET (768px) ===================== */
+@media (min-width: 768px) {
+    .footer__columnas {
+        grid-template-columns: repeat(2, 1fr);     
+    }
+}
+
+/* ===================== ESCRITORIO (1024px) ===================== */
+@media (min-width: 1024px) {
+    /* Header en una sola fila */
+    .header {
+        flex-wrap: nowrap;
+        padding: 1.25rem var(--espacio-l);
+        min-height: 80px;                          
+    }
+
+    .menu {
+        order: 2;                                 
+        width: auto;
+    }
+
+    .menu__lista {
+        gap: var(--espacio-m);
+    }
+
+    .menu__enlace {
+        padding: 0.6rem 1.25rem;
+        font-size: 1rem;
+    }
+
+    .acciones {
+        order: 3;                                  
+    }
+
+    /* Footer en tres columnas */
+    .footer {
+        padding: var(--espacio-l);
+    }
+
+    .footer__columnas {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
