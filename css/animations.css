@@ -24,3 +24,22 @@
         transform: none;
     }
 }
+
+/* ===================== TRANSICIONES DEL CATÁLOGO ===================== */
+.favoritos__etiqueta,
+.paginacion__enlace,
+.buscador__boton {
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;   
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .favoritos__etiqueta,
+    .paginacion__enlace,
+    .buscador__boton {
+        transition: none;
+    }
+
+    .favoritos__etiqueta:active {
+        transform: none;
+    }
+}
