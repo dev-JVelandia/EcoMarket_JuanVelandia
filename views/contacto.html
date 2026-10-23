@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Escríbenos a EcoMarket: formulario de contacto, ubicación y redes sociales">
+    <meta name="author" content="Juan Diego Velandia">
+    <meta name="application-name" content="EcoMarket">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/animations.css">
+    <title>EcoMarket | Contacto</title>
+</head>
+<body>
+
+    <header class="header">
+
+        <a class="header__logo" href="../index.html">EcoMarket</a>
+
+        <nav class="menu" aria-label="Navegación principal">
+            <ul class="menu__lista">
+                <li><a class="menu__enlace" href="../index.html">Inicio</a></li>
+                <li><a class="menu__enlace" href="productos.html">Productos</a></li>
+                <li><a class="menu__enlace" href="sobre-nosotros.html">Nosotros</a></li>
+                <li><a class="menu__enlace menu__enlace--activo" href="contacto.html" aria-current="page">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="acciones">
+            <a class="acciones__enlace acciones__enlace--busqueda" href="productos.html">
+                <img class="acciones__icono" src="../img/icons/busqueda.svg" width="24" height="24" alt="Buscar">
+            </a>
+            <a class="acciones__enlace acciones__enlace--carrito" href="#">
+                <img class="acciones__icono" src="../img/icons/carrito.svg" width="24" height="24" alt="Carrito de compras">
+            </a>
+        </div>
+
+    </header>
+
+    <main class="main">
+
+        <h1 class="main__titulo">Contáctanos</h1>
+
+        <p class="contacto__intro">¿Tienes una duda, una sugerencia o quieres saber más sobre un producto? Escríbenos y te responderemos lo antes posible.</p>
+
+        <div class="contacto">
+
+            <!-- Formulario -->
+
+            <section class="formulario">
+                <h2 class="formulario__titulo">Escríbenos</h2>
+
+                <form class="formulario__cuerpo" action="#" method="post">
+
+                <div class="formulario__campo">
+                    <label class="formulario__etiqueta" for="nombre">Nombre</label>
+                    <input class="formulario__entrada" type="text" id="nombre" name="nombre" required minlength="2" autocomplete="name" aria-describedby="ayuda-nombre">
+                    <p class="formulario__ayuda" id="ayuda-nombre">Obligatorio. Mínimo 2 caracteres.</p>
+                </div>
+
+                <div class="formulario__campo">
+                    <label class="formulario__etiqueta" for="email">Email</label>
+                    <input class="formulario__entrada" type="email" id="email" name="email" required autocomplete="email" aria-describedby="ayuda-email">
+                    <p class="formulario__ayuda" id="ayuda-email">Obligatorio. Escribe un correo válido, por ejemplo nombre@correo.com.</p>
+                </div>
+
+                <div class="formulario__campo">
+                    <label class="formulario__etiqueta" for="mensaje">Mensaje</label>
+                    <textarea class="formulario__entrada" id="mensaje" name="mensaje" rows="5" required minlength="10" aria-describedby="ayuda-mensaje"></textarea>
+                    <p class="formulario__ayuda" id="ayuda-mensaje">Obligatorio. Mínimo 10 caracteres.</p>
+                </div>
+
+                    <button class="boton formulario__boton" type="submit">Enviar mensaje</button>
+
+                </form>
+            </section>
+
+            <!-- Ubicación -->
+
+            <section class="ubicacion">
+                <h2 class="ubicacion__titulo">Dónde estamos</h2>
+
+                <figure class="ubicacion__mapa">
+                    <img class="ubicacion__imagen" src="../img/hero/mapa.svg" alt="Mapa estilizado con la ubicación de EcoMarket" width="600" height="450" loading="lazy">
+                    <figcaption class="ubicacion__direccion">Calle Verde 445-12, Bogotá</figcaption>
+                </figure>
+            </section>
+
+            <!-- Redes sociales -->
+
+            <section class="redes">
+                <h2 class="redes__titulo">Síguenos en redes</h2>
+
+                <ul class="redes__lista">
+                    <li class="redes__item">
+                        <a class="redes__enlace" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <img class="redes__icono" src="../img/icons/instagram.svg" width="24" height="24" alt="Instagram">
+                        </a>
+                    </li>
+                    <li class="redes__item">
+                        <a class="redes__enlace" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                            <img class="redes__icono" src="../img/icons/facebook.svg" width="24" height="24" alt="Facebook">
+                        </a>
+                    </li>
+                    <li class="redes__item">
+                        <a class="redes__enlace" href="https://x.com" target="_blank" rel="noopener noreferrer">
+                            <img class="redes__icono" src="../img/icons/x.svg" width="24" height="24" alt="X">
+                        </a>
+                    </li>
+                </ul>
+            </section>
+
+        </div>
+
+    </main>
+
+    <footer class="footer">
+
+        <p class="footer__logo">EcoMarket | Tienda Sustentable</p>
+
+        <div class="footer__columnas">
+
+            <!-- Sección de Contacto -->
+
+            <div class="footer__seccion">
+
+                <h3 class="footer__titulo">Contacto</h3>
+
+                <address class="footer__address">
+                    <ul class="footer__lista">
+                        <li class="footer__item">
+                            <a class="footer__enlace" href="mailto:info@ecomarket.com">
+                                <img class="footer__icono" src="../img/icons/correo.svg" width="20" height="20" alt="">
+                                <span>info@ecomarket.com</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a class="footer__enlace" href="tel:+573001234567">
+                                <img class="footer__icono" src="../img/icons/telefono.svg" width="20" height="20" alt="">
+                                <span>+57 300 123 4567</span>
+                            </a>
+                        </li>
+
+                        <li class="footer__item">
+                            <a class="footer__enlace" href="https://www.google.com/maps/search/?api=1&query=Calle+Verde+445-12+Bogota" target="_blank" rel="noopener noreferrer">
+                                <img class="footer__icono" src="../img/icons/ubicacion.svg" width="20" height="20" alt="">
+                                <span>Calle Verde 445-12, Bogotá</span>
+                            </a>
+                        </li>
+                    </ul>
+                </address>
+
+            </div>
+
+            <!-- Sección Legal -->
+
+            <nav class="footer__seccion" aria-label="Enlaces legales">
+
+                <h3 class="footer__titulo">Legal</h3>
+
+                <ul class="footer__lista">
+                    <li class="footer__item">
+                        <a class="footer__enlace" href="#">Términos y condiciones</a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__enlace" href="#">Política de privacidad</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Sección Síguenos -->
+
+            <nav class="footer__seccion" aria-label="Redes sociales">
+
+                <h3 class="footer__titulo">Síguenos</h3>
+
+                <ul class="footer__lista">
+                    <li class="footer__item">
+                        <a class="footer__enlace" href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <img class="footer__icono" src="../img/icons/instagram.svg" width="20" height="20" alt="Instagram">
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__enlace" href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                            <img class="footer__icono" src="../img/icons/facebook.svg" width="20" height="20" alt="Facebook">
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a class="footer__enlace" href="https://x.com" target="_blank" rel="noopener noreferrer">
+                            <img class="footer__icono" src="../img/icons/x.svg" width="20" height="20" alt="X">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <p class="footer__copy">&copy; 2026 EcoMarket. Todos los derechos reservados.</p>
+
+    </footer>
+
+</body>
+</html>
