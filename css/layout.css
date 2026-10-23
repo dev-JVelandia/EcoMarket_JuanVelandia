@@ -399,3 +399,103 @@
         grid-template-columns: repeat(4, minmax(0, 1fr));   
     }
 }
+
+/* ===================== SOBRE NOSOTROS ===================== */
+.historia,
+.principios,
+.testimonios {
+    max-width: 1200px;                           
+    margin: 0 auto;                              
+    padding: var(--espacio-l) var(--espacio-m);  
+}
+
+.historia__titulo,
+.principios__titulo,
+.testimonios__titulo {
+    margin-bottom: var(--espacio-m);           
+    font-size: 1.5rem;
+    color: var(--color-verde-oscuro);
+}
+
+
+.historia__contenido {
+    display: flex;
+    flex-direction: column;                     
+    gap: var(--espacio-m);
+}
+
+.historia__imagen {
+    width: 100%;                             
+    height: auto;                              
+    border-radius: 12px;
+}
+
+.historia__texto {
+    display: flex;
+    flex-direction: column;                      
+    gap: var(--espacio-m);                      
+}
+
+/* ----- Principios ----- */
+.principios__lista {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);       
+    gap: var(--espacio-m);
+}
+
+
+.testimonios__carrusel {
+    display: flex;                              
+    gap: var(--espacio-m);
+    padding: 12px 4px 16px;                      
+    overflow-x: auto;                            
+    scroll-snap-type: x mandatory;               
+    scroll-padding-inline: 4px;                  
+    overscroll-behavior-x: contain;             
+    scrollbar-color: var(--color-verde-boton) var(--color-verde-suave);   
+}
+
+.testimonio {
+    flex: 0 0 85%;                             
+    scroll-snap-align: start;                    
+}
+
+/* ----- Tablet ----- */
+@media (min-width: 768px) {
+    .historia__contenido {
+        flex-direction: row;                    
+        align-items: center;                  
+        gap: var(--espacio-l);
+    }
+
+    .historia__imagen,
+    .historia__texto {
+        flex: 1 1 0;                             
+        min-width: 0;                           
+    }
+
+    .principios__lista {
+        grid-template-columns: repeat(2, minmax(0, 1fr));  
+    }
+
+    .testimonio {
+        flex-basis: calc((100% - var(--espacio-m)) / 2);   
+    }
+}
+
+/* ----- Escritorio ----- */
+@media (min-width: 1024px) {
+    .historia,
+    .principios,
+    .testimonios {
+        padding: var(--espacio-l);              
+    }
+
+    .principios__lista {
+        grid-template-columns: repeat(4, minmax(0, 1fr));    
+    }
+
+    .testimonio {
+        flex-basis: calc((100% - 2 * var(--espacio-m)) / 3); 
+    }
+}
