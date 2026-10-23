@@ -339,3 +339,88 @@
     outline: 3px solid var(--color-verde-principal);   
     outline-offset: 2px;
 }
+
+/* ===================== FORMULARIO ===================== */
+.formulario__etiqueta {
+    font-weight: 700;
+    color: var(--color-verde-oscuro);
+}
+
+.formulario__entrada {
+    width: 100%;
+    min-height: 44px;                           
+    padding: 0.6rem var(--espacio-m);
+    border: 2px solid #767676;                  
+    border-radius: 12px;
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+    font: inherit;                               
+}
+
+textarea.formulario__entrada {
+    min-height: 140px;
+    resize: vertical;                            
+}
+
+.formulario__entrada:invalid {
+    border-color: #c0392b;                      
+}
+
+.formulario__entrada:valid {
+    border-color: var(--color-verde-boton);      
+}
+
+.formulario__entrada:focus-visible {
+    outline: 3px solid var(--color-verde-principal);
+    outline-offset: 2px;
+}
+
+.formulario__ayuda {
+    font-size: 0.85rem;
+    color: #4a4a4a;
+}
+
+.formulario__entrada:invalid + .formulario__ayuda {
+    color: #a93226;                              
+}
+
+.formulario__entrada:invalid + .formulario__ayuda::before {
+    content: "! ";
+}
+
+.formulario__entrada:valid + .formulario__ayuda {
+    color: var(--color-verde-boton);
+}
+
+.formulario__entrada:valid + .formulario__ayuda::before {
+    content: "✓ ";
+}
+
+.formulario__boton {
+    align-self: flex-start;                      
+    border: 0;                                   
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* ===================== REDES SOCIALES ===================== */
+.redes__enlace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--color-verde-oscuro); 
+}
+
+.redes__icono {
+    width: 24px;
+    height: 24px;
+}
+
+.redes__enlace:focus-visible {
+    outline: 3px solid var(--color-verde-principal);
+    outline-offset: 3px;
+}
