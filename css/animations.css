@@ -43,3 +43,29 @@
         transform: none;
     }
 }
+
+/* ===================== HOVER EN TARJETAS DE NOSOTROS ===================== */
+.principios__item,
+.testimonio {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;   
+}
+
+.principios__item:hover,
+.testimonio:hover,
+.testimonio:focus-within {
+    transform: translateY(-6px);                
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18); 
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .principios__item,
+    .testimonio {
+        transition: none;                       
+    }
+
+    .principios__item:hover,
+    .testimonio:hover,
+    .testimonio:focus-within {
+        transform: none;
+    }
+}
