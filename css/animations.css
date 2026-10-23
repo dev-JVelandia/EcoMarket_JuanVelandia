@@ -69,3 +69,24 @@
         transform: none;
     }
 }
+
+/* ===================== REDES: SCALE AL HOVER ===================== */
+.redes__enlace {
+    transition: transform 0.2s ease;             
+}
+
+.redes__enlace:hover,
+.redes__enlace:focus-visible {
+    transform: scale(1.2);                       
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .redes__enlace {
+        transition: none;
+    }
+
+    .redes__enlace:hover,
+    .redes__enlace:focus-visible {
+        transform: none;
+    }
+}
