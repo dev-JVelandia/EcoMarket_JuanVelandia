@@ -1,0 +1,426 @@
+/* ===================== BOTÓN ===================== */
+.boton {
+    display: inline-block;                      
+    padding: 0.75rem 1.5rem;                    
+    background-color: var(--color-verde-boton); 
+    color: var(--color-blanco);
+    font-weight: 700;
+    text-align: center;                         
+    border-radius: 24px;                      
+}
+
+.boton:hover {
+    background-color: var(--color-verde-oscuro);  
+}
+
+.boton:focus-visible {
+    outline: 3px solid var(--color-verde-principal);   
+    outline-offset: 3px;                               
+}
+
+/* ===================== TARJETA ===================== */
+.tarjeta {
+    display: flex;                             
+    flex-direction: column;                     
+    gap: var(--espacio-s);                      
+    padding: var(--espacio-m);                 
+    background-color: var(--color-blanco);      
+    border-radius: 12px;                        
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);   
+}
+
+.tarjeta__imagen {
+    width: 100%;                                
+    aspect-ratio: 4 / 3;                      
+    object-fit: cover;                          
+    border-radius: 8px;
+}
+
+.tarjeta__nombre {
+    font-size: 1.1rem;                          
+    color: var(--color-verde-oscuro);
+}
+
+.tarjeta__descripcion {
+    flex: 1;                                    
+    font-size: 0.95rem;
+}
+
+/* ===================== TARJETA DE CATÁLOGO ===================== */
+.tarjeta__precio {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-verde-oscuro);
+}
+
+.tarjeta__estado {
+    align-self: flex-start;                     
+    padding: 0.25rem 0.75rem;
+    border-radius: 12px;
+    background-color: var(--color-verde-suave);
+    color: var(--color-verde-oscuro);            
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.tarjeta__estado--agotado {
+    background-color: #e0e0e0;
+    color: #4a4a4a;                              
+}
+
+.tarjeta--agotada .tarjeta__imagen {
+    opacity: 0.5;                                
+}
+
+/* ===================== FAVORITOS ===================== */
+.favoritos {
+    position: relative;                        
+    margin-top: auto;                           
+}
+
+.favoritos__etiqueta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--espacio-s);
+    min-height: 44px;                           
+    padding: 0 var(--espacio-m);
+    border: 2px solid var(--color-verde-boton);
+    border-radius: 24px;
+    background-color: var(--color-blanco);
+    color: var(--color-verde-boton);
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.favoritos__etiqueta::before {
+    content: "♡";                               
+}
+
+.favoritos__casilla:checked + .favoritos__etiqueta {
+    background-color: var(--color-verde-boton);  
+    color: var(--color-blanco);
+}
+
+.favoritos__casilla:checked + .favoritos__etiqueta::before {
+    content: "♥";                                
+}
+
+.favoritos__etiqueta:active {
+    transform: scale(0.96);                     
+}
+
+.favoritos__casilla:focus-visible + .favoritos__etiqueta {
+    outline: 3px solid var(--color-verde-principal);   
+    outline-offset: 3px;
+}
+
+/* ===================== BUSCADOR ===================== */
+.buscador {
+    display: flex;
+    gap: var(--espacio-s);
+}
+
+.buscador__campo {
+    flex: 1;                                     
+    min-width: 0;                                
+    min-height: 44px;
+    padding: 0 var(--espacio-m);
+    border: 2px solid var(--color-verde-boton);
+    border-radius: 24px;
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+    font: inherit;                               
+}
+
+.buscador__campo:focus-visible {
+    outline: 3px solid var(--color-verde-principal);
+    outline-offset: 2px;
+}
+
+.buscador__boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;                              
+    width: 44px;
+    height: 44px;
+    border: 2px solid var(--color-verde-boton);
+    border-radius: 50%;
+    background-color: var(--color-verde-suave);  
+    cursor: pointer;
+}
+
+.buscador__boton:hover {
+    background-color: var(--color-verde-principal);
+}
+
+.buscador__boton:focus-visible {
+    outline: 3px solid var(--color-verde-principal);
+    outline-offset: 2px;
+}
+
+.buscador__icono {
+    width: 24px;
+    height: 24px;
+}
+
+/* ===================== FILTROS ===================== */
+.filtros {
+    padding: var(--espacio-m);
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filtros__titulo {
+    margin-bottom: var(--espacio-m);
+    font-size: 1.25rem;
+    color: var(--color-verde-oscuro);
+}
+
+.filtros__grupo {
+    margin: 0 0 var(--espacio-m);
+    padding: 0;
+    border: 0;                                   
+    min-inline-size: 0;                         
+}
+
+.filtros__grupo:last-child {
+    margin-bottom: 0;
+}
+
+.filtros__leyenda {
+    margin-bottom: var(--espacio-s);
+    padding: 0;
+    font-weight: 700;
+    color: var(--color-verde-oscuro);
+}
+
+.filtros__opcion {
+    display: inline-flex;                        
+    align-items: center;
+    gap: var(--espacio-s);
+    min-height: 44px;
+    margin-right: var(--espacio-m);
+}
+
+.filtros__casilla {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    accent-color: var(--color-verde-boton);      
+}
+
+.filtros__etiqueta {
+    cursor: pointer;
+}
+
+.filtros__grupo > .filtros__etiqueta {
+    display: block;                              
+    margin-bottom: var(--espacio-s);
+}
+
+.filtros__rango {
+    width: 100%;
+    accent-color: var(--color-verde-boton);
+}
+
+.filtros__casilla:focus-visible,
+.filtros__rango:focus-visible {
+    outline: 3px solid var(--color-verde-principal);
+    outline-offset: 2px;
+}
+
+.filtros__limites {
+    display: flex;
+    justify-content: space-between;             
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .filtros__opcion {
+        display: flex;                          
+        margin-right: 0;
+    }
+}
+
+/* ===================== PAGINACIÓN ===================== */
+.paginacion__enlace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 44px;
+    min-height: 44px;
+    padding: 0 var(--espacio-m);
+    border: 2px solid var(--color-verde-boton);
+    border-radius: 24px;
+    background-color: var(--color-blanco);
+    color: var(--color-verde-boton);
+    font-weight: 700;
+}
+
+.paginacion__enlace:hover {
+    background-color: var(--color-verde-suave);
+}
+
+.paginacion__enlace[aria-current="page"] {
+    background-color: var(--color-verde-boton);  
+    color: var(--color-blanco);
+}
+
+.paginacion__enlace[aria-disabled="true"] {
+    opacity: 0.5;                                
+    pointer-events: none;
+}
+
+.paginacion__enlace:focus-visible {
+    outline: 3px solid var(--color-verde-principal);
+    outline-offset: 2px;
+}
+
+/* ===================== PRINCIPIOS ===================== */
+.principios__item {
+    display: flex;
+    flex-direction: column;                    
+    align-items: center;                         
+    gap: var(--espacio-s);
+    padding: var(--espacio-m);
+    text-align: center;
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.principios__icono {
+    width: 64px;
+    height: 64px;
+}
+
+.principios__nombre {
+    font-size: 1.1rem;
+    color: var(--color-verde-oscuro);
+}
+
+/* ===================== TESTIMONIOS ===================== */
+.testimonio {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espacio-s);
+    padding: var(--espacio-m);
+    background-color: var(--color-blanco);
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.testimonio__foto {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;                        
+    object-fit: cover;
+}
+
+.testimonio__nombre {
+    font-size: 1.05rem;
+    color: var(--color-verde-oscuro);
+}
+
+.testimonio__estrellas {
+    color: #b7791f;                              
+    font-size: 1.1rem;
+    letter-spacing: 2px;                        
+}
+
+.testimonio__comentario {
+    font-style: italic;                          
+}
+
+.testimonios__carrusel:focus-visible {
+    outline: 3px solid var(--color-verde-principal);   
+    outline-offset: 2px;
+}
+
+/* ===================== FORMULARIO ===================== */
+.formulario__etiqueta {
+    font-weight: 700;
+    color: var(--color-verde-oscuro);
+}
+
+.formulario__entrada {
+    width: 100%;
+    min-height: 44px;                           
+    padding: 0.6rem var(--espacio-m);
+    border: 2px solid #767676;                  
+    border-radius: 12px;
+    background-color: var(--color-blanco);
+    color: var(--color-texto);
+    font: inherit;                               
+}
+
+textarea.formulario__entrada {
+    min-height: 140px;
+    resize: vertical;                            
+}
+
+.formulario__entrada:invalid {
+    border-color: #c0392b;                      
+}
+
+.formulario__entrada:valid {
+    border-color: var(--color-verde-boton);      
+}
+
+.formulario__entrada:focus-visible {
+    outline: 3px solid var(--color-verde-principal);
+    outline-offset: 2px;
+}
+
+.formulario__ayuda {
+    font-size: 0.85rem;
+    color: #4a4a4a;
+}
+
+.formulario__entrada:invalid + .formulario__ayuda {
+    color: #a93226;                              
+}
+
+.formulario__entrada:invalid + .formulario__ayuda::before {
+    content: "! ";
+}
+
+.formulario__entrada:valid + .formulario__ayuda {
+    color: var(--color-verde-boton);
+}
+
+.formulario__entrada:valid + .formulario__ayuda::before {
+    content: "✓ ";
+}
+
+.formulario__boton {
+    align-self: flex-start;                      
+    border: 0;                                   
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+/* ===================== REDES SOCIALES ===================== */
+.redes__enlace {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--color-verde-oscuro); 
+}
+
+.redes__icono {
+    width: 24px;
+    height: 24px;
+}
+
+.redes__enlace:focus-visible {
+    outline: 3px solid var(--color-verde-principal);
+    outline-offset: 3px;
+}

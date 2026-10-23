@@ -1,0 +1,92 @@
+/* ===================== TRANSICIONES Y HOVER ===================== */
+.boton {
+    transition: background-color 0.2s ease;     
+}
+
+.tarjeta {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;   
+}
+
+.tarjeta:hover,
+.tarjeta:focus-within {
+    transform: translateY(-6px);                
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .boton,
+    .tarjeta {
+        transition: none;                       
+    }
+
+    .tarjeta:hover,
+    .tarjeta:focus-within {
+        transform: none;
+    }
+}
+
+/* ===================== TRANSICIONES DEL CATÁLOGO ===================== */
+.favoritos__etiqueta,
+.paginacion__enlace,
+.buscador__boton {
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;   
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .favoritos__etiqueta,
+    .paginacion__enlace,
+    .buscador__boton {
+        transition: none;
+    }
+
+    .favoritos__etiqueta:active {
+        transform: none;
+    }
+}
+
+/* ===================== HOVER EN TARJETAS DE NOSOTROS ===================== */
+.principios__item,
+.testimonio {
+    transition: transform 0.25s ease, box-shadow 0.25s ease;   
+}
+
+.principios__item:hover,
+.testimonio:hover,
+.testimonio:focus-within {
+    transform: translateY(-6px);                
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.18); 
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .principios__item,
+    .testimonio {
+        transition: none;                       
+    }
+
+    .principios__item:hover,
+    .testimonio:hover,
+    .testimonio:focus-within {
+        transform: none;
+    }
+}
+
+/* ===================== REDES: SCALE AL HOVER ===================== */
+.redes__enlace {
+    transition: transform 0.2s ease;             
+}
+
+.redes__enlace:hover,
+.redes__enlace:focus-visible {
+    transform: scale(1.2);                       
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .redes__enlace {
+        transition: none;
+    }
+
+    .redes__enlace:hover,
+    .redes__enlace:focus-visible {
+        transform: none;
+    }
+}
