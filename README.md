@@ -4,7 +4,7 @@ Tienda en línea de productos ecológicos, reutilizables y sustentables. Este pr
 
 ## Sitio publicado
 
-- **Sitio web:** https://TU-SITIO.netlify.app  <!-- REEMPLAZA este enlace por el de tu despliegue -->
+- **Sitio web:** https://dev-jvelandia.github.io/EcoMarket_JuanVelandia/ 
 - **Repositorio:** https://github.com/dev-JVelandia/EcoMarket_JuanVelandia
 
 ## Vistas
